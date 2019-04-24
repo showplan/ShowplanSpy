@@ -30,7 +30,7 @@ namespace ShowplanSpy.Web
                             .AllowAnyMethod()
                             .AllowAnyHeader()
                             // this is the port vue server will launch the app if we are working the web frontend
-                            .WithOrigins("http://localhost:8080") 
+                            .WithOrigins("http://localhost:8080", $"http://localhost:{port}") 
                             .AllowCredentials();
                     }));
                     services.AddSignalR();
